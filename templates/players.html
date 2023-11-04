@@ -1,0 +1,48 @@
+{% extends 'header.html' %}
+<body>
+{% block content %}
+   </div>
+   <div class="nav">
+        <h2>– PLAYERS –</h2>
+        <table class="content-nav">
+            <thead>
+              <tr>
+                <td>#player</td>
+                <td>club</td>
+                <td>transfer value, <br> mill. euro</td>
+              </tr>
+            </thead>
+          </table>
+    </div>
+    <div class="content">
+        <table class="playerss">
+          {% for player in players%}
+          <tr>
+            <td>{{forloop.counter}}. {{player.ism}}</td>
+            <td>{{player.club}}</td>
+            <td>{{player.qiymat}}</td>
+          </tr>
+          {% endfor%}
+          </table>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta sequi quia eos cupiditate rerum accusantium odit enim, expedita, architecto error dignissimos voluptatibus. Nisi illo, maiores fugit amet neque eveniet!</p>
+      </div>
+      <div class="footer state-footer">
+        <a href="https://www.facebook.com/topfootballtransfers/">
+          <div>
+            <i class="fa-brands fa-facebook-f"></i> &nbsp;
+              <h3>facebook</h3>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/topfootballtransfers/">
+          <div>
+            <i class="fa-brands fa-instagram"></i> &nbsp;
+            <h3>Instagram</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+{% endblock %}
+  </body>
+  <script src="js/main.js"></script>
+</html>

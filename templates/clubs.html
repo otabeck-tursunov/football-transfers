@@ -1,0 +1,43 @@
+{% extends 'header.html' %}
+<body>
+{% block content %}
+      </div>
+      <d  iv class="nav">
+        <h2>– CLUBS –</h2>
+        <table class="content-nav"></table>
+      </d>
+      <div class="content" style="margin-top: 170px">
+        <div class="clubs">
+          {% for club in clubs %}
+          <div class="club">
+            <a href="/clubs/{{club.nom}}/">
+              <img src="{{club.logo.url}}"/>
+              {{club.nom}}
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        <p>
+          It is a list of clubs with at least one ongoing employment contract
+          with player whose predicted transfer value is at least 20 million
+          euro.
+        </p>
+      </div>
+      <div class="footer state-footer">
+        <a href="https://www.facebook.com/topfootballtransfers/">
+          <div>
+            <i class="fa-brands fa-facebook-f"></i> &nbsp;
+              <h3>facebook</h3>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/topfootballtransfers/">
+          <div>
+            <i class="fa-brands fa-instagram"></i> &nbsp;
+            <h3>Instagram</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+{% endblock %}
+  </body>
+
